@@ -9,7 +9,7 @@ import {
 } from "lucide-react";
 import { motion } from "framer-motion";
 
-import { APK_URL } from "@/src/data/landing";
+import { useAppConfigStore } from "@/src/store/appConfigStore";
 import Button from "../ui/Button";
 
 const fadeUp = {
@@ -24,6 +24,9 @@ const fadeUp = {
 };
 
 export default function Hero() {
+  const apkUrl = useAppConfigStore((state) => state.apkUrl);
+  const screenshot0Url = useAppConfigStore((state) => state.screenshot0Url);
+
   return (
     <section
       id="top"
@@ -71,7 +74,7 @@ export default function Hero() {
               size="lg"
             >
               <a
-                href={APK_URL}
+                href={apkUrl}
                 target="_blank"
                 rel="noreferrer"
               >
@@ -129,7 +132,7 @@ export default function Hero() {
           <div className="glass-strong overflow-hidden rounded-3xl p-2">
 
             <img
-              src="/soulsync-screen-0.jpg"
+              src={screenshot0Url}
               alt="SoulSync app showing the couple home dashboard and Watch Together video call"
               className="w-full rounded-2xl"
               width={1774}

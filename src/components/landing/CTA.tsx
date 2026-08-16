@@ -1,9 +1,12 @@
+"use client";
+
 import { Download, Heart } from "lucide-react";
 import Button from "../ui/Button";
-import { APK_URL } from "@/src/data/landing";
-
+import { useAppConfigStore } from "@/src/store/appConfigStore";
 
 export default function CTA() {
+  const apkUrl = useAppConfigStore((state) => state.apkUrl);
+
   return (
     <section className="relative z-10 mx-auto max-w-6xl px-5 pb-24">
       <div className="glass-strong glow-soul relative overflow-hidden rounded-[2rem] px-6 py-16 text-center">
@@ -20,7 +23,7 @@ export default function CTA() {
         </p>
 
         <Button asChild variant="soul" size="xl" className="mt-8">
-          <a href={APK_URL} target="_blank" rel="noreferrer">
+          <a href={apkUrl} target="_blank" rel="noreferrer">
             <Download className="h-5 w-5" />
             Download SoulSync 3.1
           </a>

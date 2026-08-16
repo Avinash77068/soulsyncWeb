@@ -3,6 +3,7 @@
 import { Flame } from "lucide-react";
 import { motion } from "framer-motion";
 
+import { useAppConfigStore } from "@/src/store/appConfigStore";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 28 },
@@ -10,6 +11,8 @@ const fadeUp = {
 };
 
 export default function Screens() {
+  const screenshot1Url = useAppConfigStore((state) => state.screenshot1Url);
+
   return (
     <section id="screens" className="relative z-10 mx-auto max-w-6xl px-5 pb-24">
       <motion.div
@@ -38,7 +41,7 @@ export default function Screens() {
         </div>
 
         <img
-          src="/soulsync-screen-1.jpg"
+          src={screenshot1Url}
           alt="SoulSync screens: home dashboard, private chat, watch together and memories gallery"
           className="mt-8 w-full rounded-2xl"
           loading="lazy"
