@@ -6,11 +6,10 @@ import Screens from "@/src/components/landing/Screens";
 import Stats from "@/src/components/landing/Stats";
 import Footer from "@/src/components/layout/Footer";
 import Navbar from "@/src/components/layout/Navbar";
-import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
+    <div className="flex flex-1 flex-col font-sans">
       <Navbar />
 
       <Hero />

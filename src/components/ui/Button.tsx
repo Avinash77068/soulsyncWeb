@@ -56,23 +56,31 @@ export default function Button({
   type = "button",
   ...props
 }: ButtonProps) {
-  const Comp = asChild ? Slot : "button";
+  const classes = [
+    "inline-flex items-center justify-center gap-2 whitespace-nowrap",
+    "font-medium transition-all duration-200 active:scale-[0.98]",
+    "disabled:pointer-events-none disabled:opacity-50",
+    variantStyles[variant],
+    sizeStyles[size],
+    fullWidth ? "w-full" : "",
+    className,
+  ].join(" ");
+
+  if (asChild) {
+    return (
+      <Slot {...props} aria-disabled={disabled || loading} className={classes}>
+        {children}
+      </Slot>
+    );
+  }
 
   return (
-    <Comp
-      {...(!asChild ? { type } : {})}
+    <button
+      type={type}
       {...props}
-      disabled={!asChild ? disabled || loading : undefined}
+      disabled={disabled || loading}
       aria-disabled={disabled || loading}
-      className={[
-        "inline-flex items-center justify-center gap-2 whitespace-nowrap",
-        "font-medium transition-all duration-200 active:scale-[0.98]",
-        "disabled:pointer-events-none disabled:opacity-50",
-        variantStyles[variant],
-        sizeStyles[size],
-        fullWidth ? "w-full" : "",
-        className,
-      ].join(" ")}
+      className={classes}
     >
       {loading ? (
         <>
@@ -86,6 +94,6 @@ export default function Button({
           {rightIcon && <span className="shrink-0">{rightIcon}</span>}
         </>
       )}
-    </Comp>
+    </button>
   );
 }

@@ -11,7 +11,6 @@ import { motion } from "framer-motion";
 
 import { APK_URL } from "@/src/data/landing";
 import Button from "../ui/Button";
-// import poster from "@/assets/soulsync-screen-0.webp";
 
 const fadeUp = {
   hidden: {
@@ -130,7 +129,7 @@ export default function Hero() {
           <div className="glass-strong overflow-hidden rounded-3xl p-2">
 
             <img
-              // src={poster}
+              src="/soulsync-screen-0.jpg"
               alt="SoulSync app showing the couple home dashboard and Watch Together video call"
               className="w-full rounded-2xl"
               width={1774}

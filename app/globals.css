@@ -1,26 +1,91 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0a0a0f;
+  --foreground: #f5f4f7;
+  --muted-foreground: #938da3;
+  --border: #2e2b38;
+  --blush: #ec4899;
+  --azure: #38bdf8;
+  --purple: #a855f7;
+  --rose: #f43f5e;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-blush: var(--blush);
+  --color-azure: var(--azure);
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-geist-sans);
+
+  --animate-soul-float: soul-float 6s ease-in-out infinite;
+  --animate-soul-pulse: soul-pulse 2.2s ease-in-out infinite;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@keyframes soul-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes soul-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.75;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.glass-strong {
+  background: rgba(255, 255, 255, 0.055);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+
+.glow-soul {
+  box-shadow:
+    0 0 120px -30px rgba(236, 72, 153, 0.45),
+    0 0 60px -20px rgba(168, 85, 247, 0.35);
+}
+
+.bg-soul-soft {
+  background: radial-gradient(
+    ellipse at center,
+    rgba(168, 85, 247, 0.25),
+    rgba(236, 72, 153, 0.12) 45%,
+    transparent 70%
+  );
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, var(--purple), var(--blush) 55%, var(--rose));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }

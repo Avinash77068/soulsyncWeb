@@ -38,7 +38,7 @@ export default function Screens() {
         </div>
 
         <img
-          // src={screens}
+          src="/soulsync-screen-1.jpg"
           alt="SoulSync screens: home dashboard, private chat, watch together and memories gallery"
           className="mt-8 w-full rounded-2xl"
           loading="lazy"
