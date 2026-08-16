@@ -1,6 +1,8 @@
+"use client";
+
 import { Flame } from "lucide-react";
 import { motion } from "framer-motion";
-import screens from "@/assets/soulsync-screen-1.webp";
+
 
 const fadeUp = {
   hidden: { opacity: 0, y: 28 },
@@ -36,7 +38,7 @@ export default function Screens() {
         </div>
 
         <img
-          src={screens}
+          // src={screens}
           alt="SoulSync screens: home dashboard, private chat, watch together and memories gallery"
           className="mt-8 w-full rounded-2xl"
           loading="lazy"

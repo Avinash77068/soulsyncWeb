@@ -1,7 +1,9 @@
 import { Download } from "lucide-react";
-import icon from "@/assets/soulsync-icon.webp";
-import Button from "@/components/ui/Button";
-import { APK_URL } from "@/data/landing";
+import { APK_URL } from "@/src/data/landing";
+import Button from "../ui/Button";
+// import icon from "@/assets/soulsync-icon.webp";
+
+
 
 export default function Navbar() {
   return (
@@ -9,7 +11,7 @@ export default function Navbar() {
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-5">
         <a href="#top" className="flex items-center gap-3">
           <img
-            src={icon}
+            // src={icon}
             alt="SoulSync app icon"
             className="h-10 w-10 rounded-xl"
             width={40}

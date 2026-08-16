@@ -1,6 +1,7 @@
 import { Download, Heart } from "lucide-react";
-import Button from "@/components/ui/Button";
-import { APK_URL } from "@/data/landing";
+import Button from "../ui/Button";
+import { APK_URL } from "@/src/data/landing";
+
 
 export default function CTA() {
   return (

@@ -1,6 +1,8 @@
+"use client";
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
-import { faqs } from "@/data/landing";
+import { faqs } from "@/src/data/landing";
+
 
 export default function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
@@ -12,7 +14,7 @@ export default function FAQ() {
       </h2>
 
       <div className="mt-10 space-y-3">
-        {faqs.map((f, i) => {
+        {faqs?.map((f, i) => {
           const isOpen = open === i;
 
           return (

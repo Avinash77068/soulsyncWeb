@@ -1,5 +1,9 @@
+"use client";
+
 import { motion } from "framer-motion";
-import { features } from "@/data/landing";
+
+import { features } from "@/src/data/landing";
+
 
 const fadeUp = {
   hidden: { opacity: 0, y: 28 },
@@ -28,7 +32,7 @@ export default function Features() {
       </motion.div>
 
       <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {features.map((f, i) => {
+        {features?.map((f, i) => {
           const Icon = f.icon;
 
           return (

@@ -1,4 +1,5 @@
-import { stats } from "@/data/landing";
+import { stats } from "@/src/data/landing";
+
 
 export default function Stats() {
   return (
