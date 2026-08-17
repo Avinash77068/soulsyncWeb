@@ -12,7 +12,7 @@ const fadeUp = {
 
 export default function Features() {
   return (
-    <section id="features" className="relative z-10 mx-auto max-w-6xl px-5 pb-24 pt-12">
+    <section id="features" className="relative z-10 mx-auto max-w-6xl bg-linear-to-b from-transparent via-rose-500/5 to-transparent px-5 pb-24 pt-12">
       <motion.div
         initial="hidden"
         whileInView="show"

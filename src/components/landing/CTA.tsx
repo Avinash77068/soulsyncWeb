@@ -8,7 +8,7 @@ export default function CTA() {
   const apkUrl = useAppConfigStore((state) => state.apkUrl);
 
   return (
-    <section className="relative z-10 mx-auto max-w-6xl px-5 pb-24">
+    <section className="relative z-10 mx-auto max-w-6xl bg-linear-to-b from-transparent via-fuchsia-500/5 to-transparent px-5 pb-24">
       <div className="glass-strong glow-soul relative overflow-hidden rounded-[2rem] px-6 py-16 text-center">
         <div className="bg-soul-soft absolute inset-0 -z-10" />
 

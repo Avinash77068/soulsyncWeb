@@ -8,7 +8,7 @@ export default function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="relative z-10 mx-auto max-w-3xl px-5 pb-24">
+    <section id="faq" className="relative z-10 mx-auto max-w-3xl bg-linear-to-b from-transparent via-violet-500/5 to-transparent px-5 pb-24">
       <h2 className="text-center font-display text-3xl font-extrabold tracking-tight sm:text-4xl">
         Questions, <span className="text-gradient">answered</span>
       </h2>

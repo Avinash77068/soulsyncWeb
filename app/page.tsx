@@ -9,7 +9,7 @@ import Navbar from "@/src/components/layout/Navbar";
 
 export default function Home() {
   return (
-    <div className="flex flex-1 flex-col font-sans">
+    <div className="flex flex-1 flex-col bg-linear-to-b from-violet-500/5 via-background to-rose-500/5 font-sans">
       <Navbar />
 
       <Hero />

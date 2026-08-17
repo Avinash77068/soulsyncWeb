@@ -30,7 +30,7 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative z-10 mx-auto max-w-6xl px-5 pb-10 pt-8 md:pt-16"
+      className="relative z-10 mx-auto max-w-6xl bg-linear-to-b from-violet-500/5 via-transparent to-transparent px-5 pb-10 pt-8 md:pt-16"
     >
       <div className="grid items-center gap-12 md:grid-cols-2">
 

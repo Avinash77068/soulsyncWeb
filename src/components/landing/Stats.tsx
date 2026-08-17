@@ -3,7 +3,7 @@ import { stats } from "@/src/data/landing";
 
 export default function Stats() {
   return (
-    <section className="relative z-10 mx-auto max-w-6xl px-5 pb-10">
+    <section className="relative z-10 mx-auto max-w-6xl bg-linear-to-b from-transparent via-violet-500/5 to-transparent px-5 pb-10">
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
         {stats.map((s) => (
           <div key={s.label} className="glass rounded-2xl px-4 py-5 text-center">

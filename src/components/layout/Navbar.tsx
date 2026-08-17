@@ -9,7 +9,7 @@ export default function Navbar() {
   const iconUrl = useAppConfigStore((state) => state.iconUrl);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border/40 bg-background/75 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-border/40 bg-linear-to-r from-violet-500/10 via-background/75 to-rose-500/10 bg-background/75 backdrop-blur-xl">
       <nav className="mx-auto flex h-[68px] max-w-6xl items-center justify-between px-5">
         {/* Logo */}
         <a

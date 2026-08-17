@@ -14,7 +14,7 @@ export default function Screens() {
   const screenshot1Url = useAppConfigStore((state) => state.screenshot1Url);
 
   return (
-    <section id="screens" className="relative z-10 mx-auto max-w-6xl px-5 pb-24">
+    <section id="screens" className="relative z-10 mx-auto max-w-6xl bg-linear-to-b from-transparent via-fuchsia-500/5 to-transparent px-5 pb-24">
       <motion.div
         initial="hidden"
         whileInView="show"
